@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "print the date",
   "engines": {
-    "node": "5.9.1"
+    "node": "4.5.0"
   },
   "main": "index.js",
   "scripts": {
