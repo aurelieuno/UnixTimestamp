@@ -15,7 +15,7 @@ var express        =         require("express");
 var app            =         express();
 var path = require("path");
 
-app.set('port', 5000);
+app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname));
 app.use(require('stylus').middleware(__dirname));
@@ -83,9 +83,9 @@ app.set('view engine', 'pug')
 
 });
 
-app.listen(app.get('port'),function(){
-  console.log("Started on PORT 5000");
-})
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 
 
 //http://localhost:5000/December%2015,%202015
